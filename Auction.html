@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mini IPL Auction</title>
+  <link rel="stylesheet" href="Auction.css">
+  <link rel="manifest" href="Auction.json">
+
+</head>
+<body>
+
+<h2>Mini IPL Auction</h2>
+
+<p id="timer"></p>
+
+<div id="teamScreen" class="screen active">
+  <h3>1. Setup Teams</h3>
+  <select id="teamCount">
+    <option value="2">2 Teams</option>
+    <option value="3">3 Teams</option>
+    <option value="4">4 Teams</option>
+  </select>
+  <div id="teamInputs"></div>
+  <button onclick="saveTeams()">Next</button>
+</div>
+
+<div id="playerScreen" class="screen">
+  <h3>2. Add Players</h3>
+  <input id="playerName" placeholder="Player Name"><br>
+  <input type="file" accept="image/*" id="playerImage"><br>
+  <input id="playerPrice" type="number" placeholder="Base Price in Cr" step="0.5" min="0.5"><br>
+  <button onclick="addPlayer()">Add Player</button>
+  <div id="playerList"></div>
+  <button onclick="startAuction()">Start Auction</button>
+</div>
+
+<div id="auctionScreen" class="screen">
+  <h3 id="playerNameDisplay">Player Name</h3>
+  <img id="playerImgDisplay"><br>
+  <p id="playerBaseDisplay"></p>
+  <p id="playerBidDisplay"></p>
+  <p id="playerTeamDisplay"></p>
+  <div id="bidButtons"></div>
+  <button onclick="nextPlayer()">Next Player</button><br>
+  <button onclick="showLiveSquads()">Live Squad View</button>
+  <p id="soldMsg"></p>
+</div>
+
+<div id="squadScreen" class="screen">
+  <h3>Final Teams</h3>
+  <div id="squadsDisplay"></div>
+  <button onclick="showLiveSquads()">View Squads Again</button><br>
+  <button onclick="resetAll()">Reset Game</button>
+</div>
+
+<audio id="buzzer" src="Auction.mp3" preload="auto"></audio>
+<audio id="bgAudio" src="background.mp3" preload="auto" loop></audio>
+
+<script src="Auction.js"></script>
+
+</body>
+</html>

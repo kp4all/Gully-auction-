@@ -1,0 +1,61 @@
+  body {
+      font-family: 'Poppins', sans-serif;
+      background: url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+      background-size: cover;
+      padding: 10px;
+      text-align: center;
+      color: #fff;
+    }
+    .screen { display: none; }
+    .active { display: block; }
+    input, button, select {
+      margin: 5px;
+      padding: 10px;
+      width: 90%;
+      max-width: 300px;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
+    }
+    button {
+      background: #f39c12;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    img { max-height: 80px; margin: 5px; border-radius: 5px; }
+    .team-box, .player-box {
+      border: 1px solid #fff;
+      margin: 10px auto;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      width: 90%;
+      max-width: 350px;
+    }
+    #timer {
+      font-size: 22px;
+      font-weight: bold;
+      color: #00ffcc;
+      margin: 10px 0;
+    }
+    .purse-display {
+      font-size: 14px;
+      color: #f39c12;
+      margin-top: 5px;
+    }
+    #playerBidDisplay {
+      font-size: 26px;
+      font-weight: bold;
+      color: #ffff00;
+      margin: 15px 0;
+    }
+    #bidButtons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    #bidButtons button {
+      flex: 1 1 120px;
+    }
